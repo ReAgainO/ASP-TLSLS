@@ -1,0 +1,83 @@
+{
+  "run": {
+    "seed": 1337,
+    "track": "B",
+    "name": "issue17-local-pilot-12-canaries"
+  },
+  "model": {
+    "path": "<path-redacted>",
+    "fallback_path": "Qwen/Qwen2.5-0.5B-Instruct",
+    "max_seq": 512,
+    "qlora": false,
+    "bits": 4
+  },
+  "dataset": {
+    "num_docs": 1200,
+    "num_canaries": 12,
+    "canary_prefix": "sk-CANARY-",
+    "canary_entropy_bytes": 8,
+    "doc_kinds": [
+      "email",
+      "ticket",
+      "code_comment"
+    ],
+    "duplication_grid": [
+      1,
+      20,
+      100
+    ],
+    "train_split": 0.9,
+    "eval_split": 0.1
+  },
+  "train": {
+    "rank_grid": [
+      8,
+      64
+    ],
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "epochs": 2,
+    "batch_size": 1,
+    "grad_accum": 8,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "constant",
+    "warmup_steps": 10,
+    "logging_steps": 10,
+    "save_steps": 200,
+    "gradient_checkpointing": true,
+    "max_oom_retries": 0
+  },
+  "eval": {
+    "prompt_types": [
+      "prefix",
+      "suffix",
+      "direct",
+      "few_shot"
+    ],
+    "prefix_tokens": 20,
+    "suffix_tokens": 8,
+    "sampling": {
+      "greedy": true,
+      "temperature": 0.7,
+      "max_new_tokens": 64
+    },
+    "metrics": [
+      "exact_match",
+      "lcs"
+    ]
+  },
+  "hardware": {
+    "primary_gpu": "RTX 3070 Ti 8GB",
+    "secondary_gpus": [
+      "RTX 3060 Laptop 6GB"
+    ],
+    "notes": "QLoRA 4-bit on 1.5B fits 6-8GB at max_seq 512 / batch 1; Windows bitsandbytes is fragile, prefer WSL2/Ubuntu."
+  }
+}

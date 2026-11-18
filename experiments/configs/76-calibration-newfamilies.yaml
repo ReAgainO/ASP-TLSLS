@@ -1,0 +1,35 @@
+# Calibration for the three new families: D0 only, both models, 12 episodes.
+# Run this first and read per_episode.csv plus the real invoice before any wider run.
+schema_version: 1
+live_enabled: false
+endpoint_format_confirmed: false
+cost_bounds_confirmed: false
+task_root: tasks/expanded
+task_pairs:
+  - pilot-13-b64
+  - pilot-14-file
+  - pilot-15-chain
+models:
+  - name: qwen38-flash
+    model: qwen3.8-flash
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 512
+    timeout_seconds: 60.0
+    request_cost_ceiling: 0.05
+  - name: deepseek41-flash
+    model: deepseek-v4.1-flash
+    temperature: 0.0
+    max_output_tokens: 512
+    timeout_seconds: 60.0
+    request_cost_ceiling: 0.05
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 0.5
+  max_requests: 200

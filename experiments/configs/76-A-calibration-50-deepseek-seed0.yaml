@@ -1,0 +1,81 @@
+# Draft for issue #76 probe batch. Fill request_cost_ceiling and budget from
+# the calibration run before setting live_enabled: true. Runner is POSIX-only (fcntl).
+schema_version: 1
+live_enabled: false
+endpoint_format_confirmed: false
+cost_bounds_confirmed: false
+task_root: tasks/probe-v1
+task_pairs:
+- probe-calendar-read_scope-base64-action_syntax-1
+- probe-calendar-read_scope-base64-action_syntax-2
+- probe-calendar-read_scope-base64-authority_threat-1
+- probe-calendar-read_scope-base64-authority_threat-2
+- probe-calendar-read_scope-base64-owner-1
+- probe-calendar-read_scope-base64-owner-2
+- probe-calendar-read_scope-base64-sync_error-1
+- probe-calendar-read_scope-base64-sync_error-2
+- probe-calendar-read_scope-base64-urgency-1
+- probe-calendar-read_scope-base64-urgency-2
+- probe-calendar-recipient-base64-action_syntax-1
+- probe-calendar-recipient-base64-action_syntax-2
+- probe-calendar-recipient-base64-authority_threat-1
+- probe-calendar-recipient-base64-authority_threat-2
+- probe-calendar-recipient-base64-owner-1
+- probe-calendar-recipient-base64-owner-2
+- probe-calendar-recipient-base64-sync_error-1
+- probe-calendar-recipient-base64-sync_error-2
+- probe-calendar-recipient-base64-urgency-1
+- probe-calendar-recipient-base64-urgency-2
+- probe-calendar-resource-base64-action_syntax-1
+- probe-calendar-resource-base64-action_syntax-2
+- probe-calendar-resource-base64-authority_threat-1
+- probe-calendar-resource-base64-authority_threat-2
+- probe-calendar-resource-base64-owner-1
+- probe-calendar-resource-base64-owner-2
+- probe-calendar-resource-base64-sync_error-1
+- probe-calendar-resource-base64-sync_error-2
+- probe-calendar-resource-base64-urgency-1
+- probe-calendar-resource-base64-urgency-2
+- probe-calendar-taint-base64-action_syntax-1
+- probe-calendar-taint-base64-action_syntax-2
+- probe-calendar-taint-base64-authority_threat-1
+- probe-calendar-taint-base64-authority_threat-2
+- probe-calendar-taint-base64-owner-1
+- probe-calendar-taint-base64-owner-2
+- probe-calendar-taint-base64-sync_error-1
+- probe-calendar-taint-base64-sync_error-2
+- probe-calendar-taint-base64-urgency-1
+- probe-calendar-taint-base64-urgency-2
+- probe-calendar-url-base64-action_syntax-1
+- probe-calendar-url-base64-action_syntax-2
+- probe-calendar-url-base64-authority_threat-1
+- probe-calendar-url-base64-authority_threat-2
+- probe-calendar-url-base64-owner-1
+- probe-calendar-url-base64-owner-2
+- probe-calendar-url-base64-sync_error-1
+- probe-calendar-url-base64-sync_error-2
+- probe-calendar-url-base64-urgency-1
+- probe-calendar-url-base64-urgency-2
+models:
+- name: deepseek
+  model: deepseek-v4.1-flash
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  request_cost_ceiling: null
+  seed: 0
+defenses:
+- D0
+- D1
+- D2
+- D3
+- D4
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 0.0
+  max_requests: 0

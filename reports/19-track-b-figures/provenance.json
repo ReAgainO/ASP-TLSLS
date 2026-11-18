@@ -1,0 +1,24 @@
+{
+  "issue": 19,
+  "activity": "derived visualization; no model inference",
+  "reference_input_commit": "dafc5091cd9225af5fd2959c0ad1948eab51d106",
+  "training_source_commit": "bb0327500b035ab1ec00a2d92e571b66a64b5006",
+  "inputs": {
+    "summary.json": "cf254dd0f2e7a3ba24eaf351ce39fcc53e9c7cd92ab4ffe03ef5696ac057ff7b",
+    "run-summary.csv": "e772f36db5d9809c8fb1b4f2d99c81b7a09b36013b229c06a21659c50582ac98"
+  },
+  "renderer_sha256": "c7340e913653b0b0426f2bcee73c2bf050f72c209ef5169c7070c313e728b963",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "seed": 1337,
+  "metric": "new-output full-target containment / 40 related train-target prompts",
+  "completion_control_pooled": false,
+  "runtime": {
+    "python": "3.10.12",
+    "matplotlib": "3.9.4"
+  },
+  "cost": {
+    "model_api": 0,
+    "new_gpu_training": 0
+  }
+}

@@ -1,0 +1,42 @@
+# Nine-language ablation, D0, Qwen2.5-7B: en/zh/ja/ko/es/ru/ar/sw/th, two payloads each.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/lang
+task_pairs:
+  - lang-17-augment-ar
+  - lang-17-augment-en
+  - lang-17-augment-es
+  - lang-17-augment-ja
+  - lang-17-augment-ko
+  - lang-17-augment-ru
+  - lang-17-augment-sw
+  - lang-17-augment-th
+  - lang-17-augment-zh
+  - lang-22-planforgery-ar
+  - lang-22-planforgery-en
+  - lang-22-planforgery-es
+  - lang-22-planforgery-ja
+  - lang-22-planforgery-ko
+  - lang-22-planforgery-ru
+  - lang-22-planforgery-sw
+  - lang-22-planforgery-th
+  - lang-22-planforgery-zh
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 4.0
+  max_requests: 1500

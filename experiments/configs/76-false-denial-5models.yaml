@@ -1,0 +1,52 @@
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - egress-01-brief
+  - egress-02-invoice
+  - egress-03-status
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen3-8b
+    model: Qwen/Qwen3-8B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen25-14b
+    model: Qwen/Qwen2.5-14B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen35-4b
+    model: Qwen/Qwen3.5-4B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: xing4-29b
+    model: XingChenAGI/Xing4.0-29B
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D1, D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 4.0
+  max_requests: 1500

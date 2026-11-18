@@ -1,0 +1,94 @@
+{
+  "generated": "2026-11",
+  "report": "reports/76-sf-screen/README.md",
+  "subset": "tasks/probe-v1/subset-C-screen-10.json",
+  "subset_sha256": "ae31f9defa7c92837d79800af0659ec1db3f90ac7e4d1a2631b2c1d5ee585d5d",
+  "line_endings": "text artefacts stored LF; .gz are byte snapshots of this Windows run (CRLF inside), marked binary",
+  "lanes": {
+    "qwen3-8b": {
+      "episodes.jsonl.gz": "84e32fe7c26cb15d56e100f48b79dff6f998752af2bc4adae6c68481619f9a9f",
+      "events.jsonl.gz": "8374daeecebea38cb12a4146964707e4c5a16d7a1e0c77a374866bae9280cf58",
+      "manifest.json": "ceb4b5e8d97e3a1aeb3569b495e2a718518708d1f950f4faf886fc213f50c3d9",
+      "per_episode.csv": "1d2e63a12ca31d5bb240967ca4aba28de86f69d5743692db57d89fa911ff78d5",
+      "summary.csv": "f27101c5f7e3f1af844c28b549ac26a23800324483c71ed21e97d20a19484caf"
+    },
+    "qwen25-7b-instruct": {
+      "episodes.jsonl.gz": "cccc33c9414312af34811b76519752da6b451fe903b4c92e80f703fc6f34261e",
+      "events.jsonl.gz": "0ae2d634c889bf5c7586a7680b5e6873a4be1355798adf38931fbac1a6255e7a",
+      "manifest.json": "440911d028f35f471c0e08efb9995cdad494656e60f5ea5e3b7da0890fc6811b",
+      "per_episode.csv": "7314b9f2359cec01ef6ebc68cdef52ab5b775fc63ac1eb679a80df798602d112",
+      "summary.csv": "302a19bdcc80f389e0b38006648ed5eb9ed2b64db51a74dac932c56bf58ad1f2"
+    },
+    "qwen35-4b": {
+      "episodes.jsonl.gz": "ad9ba8064d4ec5af8ee383a6f55434fb28c91b6efb7f5d1e2281993b375e1c25",
+      "events.jsonl.gz": "14f2774c0f623ee390531beefd98ff0db8048cb100c0cfa470b661c21a40f9f3",
+      "manifest.json": "1d558c2e6c9f2d59f820fd13575bbc43036758ac54d6e7b66e24f1b576923b50",
+      "per_episode.csv": "467bc77e4180cc2349c27b336a33445b32fc19be7b3d2866fb0acea537383c28",
+      "summary.csv": "d55a5e523ff0ac45ce22ca19e68329daa348b95eb2e52bbeb5875685cdfc379c"
+    },
+    "xing4-29b": {
+      "episodes.jsonl.gz": "8c9994f15f39c045bccc78430c889d4b1bcc120a0f3c4f60d2413bdb329660b1",
+      "events.jsonl.gz": "9d83a55bb39cc34720c378d008b9eaa3b2e787f179d177de5bb6f1587e248cea",
+      "manifest.json": "898b185c307112588afd7071214d8d71d29194647493d1cb3d5f4da10735cfd5",
+      "per_episode.csv": "eb6e15553457aa68a039165d1ef75e5f1354fb66c9ae24910f2b775266792c6b",
+      "summary.csv": "790d01d42fc3241c8b8cb208950f36243a519ede6a35f4642086623d30bbc9ee"
+    },
+    "glm4-9b-0414": {
+      "episodes.jsonl.gz": "3e2889b034a3e0c18ab24afd2a1184df73f33c2adcb36ea530ca0e38198727ca",
+      "events.jsonl.gz": "a7faefc5323d7a926c4db963334804b80458adabc4e1495ef84daf07ac9e38f1",
+      "manifest.json": "5ec64ee0a494c0d533cd23f890c82fffdeb6ad6e0c034767bb3c059421507923",
+      "per_episode.csv": "93e13a9d9eff3bf97950ce2f45ad1e22250d25056c8826688bf20cbcde3b904a",
+      "summary.csv": "58cbf9c4470b5e3dae4739cde475dd7526a38acc3e9b42f4de2dcb0bbbad1ab0"
+    },
+    "supplemented/qwen25-7b-instruct": {
+      "episodes.jsonl.gz": "ef90b39bc679ab42fdfbdc24efbda590bafe8c1c86d1765c9446298c647d6a30",
+      "events.jsonl.gz": "3fbcb3c044a9112e440028be7a44977fd7d03e03504664e1e6656b062d0647fb",
+      "manifest.json": "532d5d128ce39c846e750d73641e85cb2abfa495ef82f5187c0e7de3fbba8f5b",
+      "per_episode.csv": "83eda91b329cd434eac1a72d1ca3cf5e5d0806793e6113486926566447a4954c",
+      "summary.csv": "989a46236ac33f5f655cd86534b2f565e1ab49f19bf141594206cc0ea7103ebd"
+    },
+    "supplement-run/qwen25-7b-instruct": {
+      "episodes.jsonl.gz": "a21034f8e05f0a7cef3ba9de1626ed46994596751ef908c7901d49707abd07a7",
+      "events.jsonl.gz": "d471c0f7f0a9d3e0bfbcff99ed47ca85052802db15cda88e52fa19f08c0e1811",
+      "manifest.json": "18603307e7ac041665cc723dd2d845f815d3b396d96cd3fa4de6799e3d228eb4"
+    },
+    "supplemented/xing4-29b": {
+      "episodes.jsonl.gz": "d6db71cfbef3a3e9c006f28158385ee532c564db7345919fad9afab5761fd57c",
+      "events.jsonl.gz": "d4b1ffdbbf764ff01bf45e71fbf998824a0ba52cdf9acd7fd5226c0feb493c22",
+      "manifest.json": "015f42bd1df8b40e891e576252023ee1309fed4dfc26eaa3d2d957a7f7f05b15",
+      "per_episode.csv": "8de24e4859867e88e885b55f359b69475c22e6ef9047b80fab185071ccaf3f03",
+      "summary.csv": "598ec5f942175da2c1e02173b11b98a3a2012961d562aa9c1c51e3ea386dde9a"
+    },
+    "supplement-run/xing4-29b": {
+      "episodes.jsonl.gz": "08c785c36dd57eb01b824566c7a565fa6121785ecd8d967db2286a637eb11020",
+      "events.jsonl.gz": "0bb7b9331f8b3fa0c80b85e72c98ac093b905d222e6235ffe5040a2e0da37191",
+      "manifest.json": "8446630b509748efa85e1c62bd34b6e602ca18c1f64180ea6ce53164d91ee21c"
+    },
+    "supplemented/glm4-9b-0414": {
+      "episodes.jsonl.gz": "ddc09fd19f887dde8385eb0d8e75e47c6cf5f9f4d597481336de8cba37760181",
+      "events.jsonl.gz": "00027e975d2aaf154e5b14afa669cfb82be9bee3735fdeed52e9cdd3e283cece",
+      "manifest.json": "cd1199010e27718edda2dd5974dd3d380c131314d02259885e9e3f5f22af299d",
+      "per_episode.csv": "93e13a9d9eff3bf97950ce2f45ad1e22250d25056c8826688bf20cbcde3b904a",
+      "summary.csv": "58cbf9c4470b5e3dae4739cde475dd7526a38acc3e9b42f4de2dcb0bbbad1ab0"
+    },
+    "supplement-run/glm4-9b-0414": {
+      "episodes.jsonl.gz": "d798496e74b58590cb66d2d12797f3a2784130e3bf3b08fe59e77b119098436f",
+      "events.jsonl.gz": "126e95e91784d4d563e8c086d93730efadef68321bb739b6bdc9c9fc370c1944",
+      "manifest.json": "43c6ac7460e97c63b0be21b5831119f577aeeb567499c564c1aac774519213af"
+    }
+  },
+  "supplement": {
+    "tool": "scripts/overlay_supplement_screen.py",
+    "targets": 7,
+    "resolved": 5,
+    "still_unscored": 2,
+    "rule": "one supplementary attempt per infrastructure-unscored cell; step_limit cells are scored failures and were not resampled"
+  },
+  "analysis": {
+    "artifact-index.json": "b128ec84bec171e41ed1936726ed294021ce3d848e94c3e94ce56b2f27c8bcc6",
+    "double-denominator.json": "308ae23549dd22db14a756e3cf81f1770dddb4e6ff1ca993f7437944d3e2b481",
+    "exfil-destination-split.json": "7cd96a80c88976b839f12b0831db19b4964b7b6cbc10a3b2d9e284ba48ad265e",
+    "screen-double-denominator.json": "308ae23549dd22db14a756e3cf81f1770dddb4e6ff1ca993f7437944d3e2b481",
+    "supplement-targets.json": "0b86a03c4453b4ead249ab2d5bfb42336edc2e5607614884f10f09f8eee50a88"
+  }
+}

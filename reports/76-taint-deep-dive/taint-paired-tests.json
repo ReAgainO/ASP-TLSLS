@@ -1,0 +1,34 @@
+{
+  "design": "taint deep-dive, 20 pairs x 5 models, paired by (pair, model), exact McNemar on discordant pairs",
+  "raw_p": {
+    "D1": 0.0923,
+    "D2": 0.0574,
+    "D3": 0.0241,
+    "D4": 0.0
+  },
+  "holm_adjusted_p": {
+    "D4": 0.0,
+    "D3": 0.0724,
+    "D2": 0.1147,
+    "D1": 0.1147
+  },
+  "discordant": {
+    "D1": {
+      "D0_only": 10,
+      "defence_only": 3
+    },
+    "D2": {
+      "D0_only": 11,
+      "defence_only": 3
+    },
+    "D3": {
+      "D0_only": 21,
+      "defence_only": 8
+    },
+    "D4": {
+      "D0_only": 28,
+      "defence_only": 0
+    }
+  },
+  "n_comparisons": 4
+}

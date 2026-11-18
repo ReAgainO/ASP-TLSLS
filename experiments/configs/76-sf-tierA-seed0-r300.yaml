@@ -1,0 +1,89 @@
+# #76 A tier seed 0, retry with a 300 s request timeout (schema maximum).
+# Measured on the previous 278 requests: mean 2.09 s, median 1.60 s, p90 2.32 s, max 89.15 s,
+# 2 request_timeout failures (>120 s). The runner breaks the batch on any unscored episode, so a
+# 120 s cap turns a rare slow reply into a permanently unscored cell; 300 s covers the observed tail.
+# Cost basis from the SiliconFlow console bill 2026-11: Qwen/Qwen3-8B 131.5650 K tokens, 抵扣 0,
+# 账单金额 Y 0.0000 (free tier). request_cost_ceiling 0.013 is a guard, not a price.
+# Supersedes sf-tierA-seed0-discarded-120s-timeout (76 episodes, 2 timeouts); earlier window kept as
+# evidence. Nothing was resampled: interrupted subjects stay recorded, never regenerated.
+# subset-A sha256 40b3e4ca3435f7c06f3bcefaa3da4327f83f74d100e8f58b01e05c43ec344129 ; seed accepted but NOT honoured by this backend.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/probe-v1
+task_pairs:
+- probe-calendar-read_scope-base64-action_syntax-1
+- probe-calendar-read_scope-base64-action_syntax-2
+- probe-calendar-read_scope-base64-authority_threat-1
+- probe-calendar-read_scope-base64-authority_threat-2
+- probe-calendar-read_scope-base64-owner-1
+- probe-calendar-read_scope-base64-owner-2
+- probe-calendar-read_scope-base64-sync_error-1
+- probe-calendar-read_scope-base64-sync_error-2
+- probe-calendar-read_scope-base64-urgency-1
+- probe-calendar-read_scope-base64-urgency-2
+- probe-calendar-recipient-base64-action_syntax-1
+- probe-calendar-recipient-base64-action_syntax-2
+- probe-calendar-recipient-base64-authority_threat-1
+- probe-calendar-recipient-base64-authority_threat-2
+- probe-calendar-recipient-base64-owner-1
+- probe-calendar-recipient-base64-owner-2
+- probe-calendar-recipient-base64-sync_error-1
+- probe-calendar-recipient-base64-sync_error-2
+- probe-calendar-recipient-base64-urgency-1
+- probe-calendar-recipient-base64-urgency-2
+- probe-calendar-resource-base64-action_syntax-1
+- probe-calendar-resource-base64-action_syntax-2
+- probe-calendar-resource-base64-authority_threat-1
+- probe-calendar-resource-base64-authority_threat-2
+- probe-calendar-resource-base64-owner-1
+- probe-calendar-resource-base64-owner-2
+- probe-calendar-resource-base64-sync_error-1
+- probe-calendar-resource-base64-sync_error-2
+- probe-calendar-resource-base64-urgency-1
+- probe-calendar-resource-base64-urgency-2
+- probe-calendar-taint-base64-action_syntax-1
+- probe-calendar-taint-base64-action_syntax-2
+- probe-calendar-taint-base64-authority_threat-1
+- probe-calendar-taint-base64-authority_threat-2
+- probe-calendar-taint-base64-owner-1
+- probe-calendar-taint-base64-owner-2
+- probe-calendar-taint-base64-sync_error-1
+- probe-calendar-taint-base64-sync_error-2
+- probe-calendar-taint-base64-urgency-1
+- probe-calendar-taint-base64-urgency-2
+- probe-calendar-url-base64-action_syntax-1
+- probe-calendar-url-base64-action_syntax-2
+- probe-calendar-url-base64-authority_threat-1
+- probe-calendar-url-base64-authority_threat-2
+- probe-calendar-url-base64-owner-1
+- probe-calendar-url-base64-owner-2
+- probe-calendar-url-base64-sync_error-1
+- probe-calendar-url-base64-sync_error-2
+- probe-calendar-url-base64-urgency-1
+- probe-calendar-url-base64-urgency-2
+defenses:
+- D0
+- D1
+- D2
+- D3
+- D4
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+models:
+- name: qwen3-8b
+  model: Qwen/Qwen3-8B
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  timeout_seconds: 300.0
+  request_cost_ceiling: 0.013
+  seed: 0
+budget:
+  currency: CNY
+  max_cost: 60.0
+  max_requests: 4600

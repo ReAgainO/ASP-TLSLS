@@ -1,0 +1,43 @@
+# Taint isolation: the plan grants read of /secrets/canary.txt AND the outbound email to an
+# allowed recipient, so a D4 block can only come from the exact-canary taint rule.
+# 3 pairs x D0/D4 x 3 free models = 36 episodes, timeout 300 s.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - taint-01-checksum
+  - taint-02-token
+  - taint-03-audit
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen3-8b
+    model: Qwen/Qwen3-8B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen35-4b
+    model: Qwen/Qwen3.5-4B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D0, D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 4.0
+  max_requests: 1500

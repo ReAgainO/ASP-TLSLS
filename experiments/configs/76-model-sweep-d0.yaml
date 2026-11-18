@@ -1,0 +1,44 @@
+# Model sweep at D0 on the 12-pair subset: which weak models actually leak?
+# 6 pairs x 2 variants x 3 models = 36 episodes, 300 s timeout for the free-tier queue.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - pilot-16-b64force
+  - pilot-17-augment
+  - pilot-22-planforgery
+  - aig-06-preapproval
+  - injec-amazon-dell-enh
+  - sys-01-direct
+models:
+  - name: qwen25-14b
+    model: Qwen/Qwen2.5-14B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen35-4b
+    model: Qwen/Qwen3.5-4B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: hunyuan-a13b
+    model: tencent/Hunyuan-A13B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 5.0
+  max_requests: 2000

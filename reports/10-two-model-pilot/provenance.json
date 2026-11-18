@@ -1,0 +1,68 @@
+[
+  {
+    "run_dir": "results/42/qwen-main-01",
+    "created_at": "2026-11",
+    "code_revision": "dc40a5466d90103eaaeec122bdfddadd3885eb1c",
+    "source_hash": "2c52707488848ea90cc0c0083d243a5a664a45ca9ff42ac683e5f540205ab5d4",
+    "config_hash": "084f5193e50647cd15a43f37e61ee24d45cba40d009f0c7fb028a3f6017d3e1d",
+    "fingerprint": "f421fd179a5194b2232de84bf096ec17560fe6df2ee517c6667af99e80b8484d",
+    "endpoints": {
+      "qwen38-flash": "<provider-base-url>"
+    },
+    "usage": {
+      "model": "qwen3.8-flash",
+      "requests": 167,
+      "responses": 167,
+      "input_tokens": 27694,
+      "output_tokens": 5570,
+      "reported_cached_input_tokens": 0,
+      "missing_usage_responses": 0,
+      "nominal_uncached_cny": "0.0371942",
+      "reported_models": [
+        "qwen3.8-flash"
+      ],
+      "nonempty_reasoning_responses": 0
+    },
+    "statuses": {
+      "completed": 72
+    },
+    "raw_sha256": {
+      "events.jsonl": "e1a24a8cc274116ee2f0f04e5678d06e8bdda2c4347cdb82db24a89e56ab3694",
+      "manifest.json": "057f2d2c90ea97e52b81085b0f7a48c0e1bcddbe1fc8ff8e2004ff8d6ba446ed",
+      "episodes.jsonl": "0aada62f4fed262e1865063f51bbef132797dfcc917d58e9fac7861dc38efe6c"
+    }
+  },
+  {
+    "run_dir": "results/10/deepseek-main-01",
+    "created_at": "2026-11",
+    "code_revision": "5cfa91f9f8f3f66bf80e9d035cf3a24b1355e089",
+    "source_hash": "2c52707488848ea90cc0c0083d243a5a664a45ca9ff42ac683e5f540205ab5d4",
+    "config_hash": "eccb20a277efad71b348911ee001448ee847c438dc456760ab212abc46d63825",
+    "fingerprint": "e6ed6cbc16fdc3495eac9894190d84248ff979644dc94a8eb86a8565b34cd10f",
+    "endpoints": {
+      "deepseek41-flash": "<provider-base-url>"
+    },
+    "usage": {
+      "model": "deepseek-v4.1-flash",
+      "requests": 166,
+      "responses": 166,
+      "input_tokens": 24616,
+      "output_tokens": 6444,
+      "reported_cached_input_tokens": 512,
+      "missing_usage_responses": 0,
+      "nominal_uncached_cny": "0.100784",
+      "reported_models": [
+        "deepseek-v4.1-flash"
+      ],
+      "nonempty_reasoning_responses": 0
+    },
+    "statuses": {
+      "completed": 72
+    },
+    "raw_sha256": {
+      "events.jsonl": "4bf749966df04d432eb85cca69aefa010ed862685075d922bd86892c5b7bbc02",
+      "manifest.json": "a13f73b0c245c6f92b136a873729401a60a448472c183efd2c7ba9f571b720d9",
+      "episodes.jsonl": "2de8ff7c496674bc14c2ef30a8907065151ea4c7927cc596f51f4eee6732f4e7"
+    }
+  }
+]

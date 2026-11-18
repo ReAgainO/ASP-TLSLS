@@ -1,0 +1,54 @@
+# The one transferable payload (pilot-17-augment) under D1/D4 across five models.
+# 1 pair x 2 defenses x 2 variants x 5 models = 20 episodes, timeout 300 s.
+# Paid ids per user instruction 2026-11: Qwen/Qwen2.5-14B-Instruct and
+# tencent/Hunyuan-A13B-Instruct (the latter is time-priced 09:00-18:00).
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - pilot-17-augment
+models:
+  - name: qwen3-8b
+    model: Qwen/Qwen3-8B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen35-4b
+    model: Qwen/Qwen3.5-4B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: xing4-29b
+    model: XingChenAGI/Xing4.0-29B
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: qwen25-14b
+    model: Qwen/Qwen2.5-14B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+  - name: hunyuan-a13b
+    model: tencent/Hunyuan-A13B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D1, D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 6.0
+  max_requests: 900

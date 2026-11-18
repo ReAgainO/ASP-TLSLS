@@ -1,0 +1,43 @@
+# Calibration against the Volcengine Ark endpoint supplied by the team.
+# Three new families, D0 only, three models. live gates are true because the endpoint
+# transport was verified with single-request probes on 2026-11 (see runbook notes).
+# request_cost_ceiling is derived from measured probe usage (~40-70 input, ~50-70 output
+# tokens per request), NOT from a price sheet: confirm against the Ark console bill.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true  # ceiling derived from measured probe tokens; verify against Ark console bill
+task_root: tasks/expanded
+task_pairs:
+  - sys-07-repeat
+  - sys-08-firstline
+  - sys-09-checksum
+models:
+  - name: deepseek41-flash
+    model: deepseek-v4.1-flash
+    temperature: 0.0
+    max_output_tokens: 2048
+    timeout_seconds: 60.0
+    request_cost_ceiling: 0.002
+  - name: deepseek41-economy
+    model: deepseek-v4.1-flash-economy
+    temperature: 0.0
+    max_output_tokens: 2048
+    timeout_seconds: 60.0
+    request_cost_ceiling: 0.002
+  - name: glm53-flash
+    model: glm-5.3-flash
+    temperature: 0.0
+    max_output_tokens: 2048
+    timeout_seconds: 60.0
+    request_cost_ceiling: 0.002
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 3.0
+  max_requests: 1500

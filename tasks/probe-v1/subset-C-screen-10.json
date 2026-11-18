@@ -1,0 +1,111 @@
+{
+  "tier": "C-screen-10",
+  "corpus": "probe-v1",
+  "nested_in": null,
+  "selection_rule": "over the 5 boundaries x {plain, multi_hop} grid, rotate phrasing by (i+k) mod 5 and domain by (i+k) mod 4 over the full 1200-pair corpus; lexicographically first id on collision. Not nested in subset-A: subset-A is itself encoding-degenerate (its two pairs per cell are both calendar/base64), which would have made the screen blind to every encoding but base64.",
+  "pairs": 10,
+  "variants": 20,
+  "defenses": [
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+  ],
+  "episodes_per_model": 100,
+  "subset_sha256": "ae31f9defa7c92837d79800af0659ec1db3f90ac7e4d1a2631b2c1d5ee585d5d",
+  "pair_ids": [
+    "probe-calendar-recipient-plain-urgency-1",
+    "probe-calendar-resource-multi_hop-urgency-1",
+    "probe-email-read_scope-plain-owner-1",
+    "probe-email-taint-plain-authority_threat-1",
+    "probe-email-url-multi_hop-authority_threat-1",
+    "probe-file-read_scope-multi_hop-sync_error-1",
+    "probe-file-resource-plain-sync_error-1",
+    "probe-file-taint-multi_hop-owner-1",
+    "probe-web-recipient-multi_hop-action_syntax-1",
+    "probe-web-url-plain-action_syntax-1"
+  ],
+  "file_hashes": [
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-recipient-plain-urgency-1.yaml",
+      "sha256": "d4523a8ec4c5ec0f04fa6a1402cf7bececbe9a93ffe11282452ac2c7b1b68d97"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-recipient-plain-urgency-1.yaml",
+      "sha256": "70c8d43ae51dc7aa3408bd3940cc4a114f744ef7895446000fff1a71cb691b5b"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-resource-multi_hop-urgency-1.yaml",
+      "sha256": "c0acc0d7341a02503510aad8f375a7dfdbadb45e19badae1651aea003d908d81"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-resource-multi_hop-urgency-1.yaml",
+      "sha256": "2c680f0103e31dde74057f9fcbfaa60c90fc208edc4069de7ea192840c7672b9"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-read_scope-plain-owner-1.yaml",
+      "sha256": "5ec5417b32e9016071df22797ad09e94fda538e7f4572c4072f4a897e024ab46"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-read_scope-plain-owner-1.yaml",
+      "sha256": "b931fd4e5582be576fb4e2a3a42c1b3ad0636e094c0d52dd15e8718b4ba9bcc4"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-taint-plain-authority_threat-1.yaml",
+      "sha256": "2c94852f6641f1ecadb570537e417a014792b67d2011af177b63c8f117f7c29d"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-taint-plain-authority_threat-1.yaml",
+      "sha256": "2d724f07798bb81c761da07df87c9710c3aec5123b396ebaacf9fbeb73f97dee"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-url-multi_hop-authority_threat-1.yaml",
+      "sha256": "0514518c5e1832bfa8f2c022653beebd573a8ea3362a1863145c63190c3d4642"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-url-multi_hop-authority_threat-1.yaml",
+      "sha256": "f03f5833733432493d38cf5c31016d041d7a261658e99a7cc568a6bbdd41740e"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-read_scope-multi_hop-sync_error-1.yaml",
+      "sha256": "92d188acf9a855c676fb3ebb9ec5c6be2b57c8e0fb6a4acdca22be57524ba980"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-read_scope-multi_hop-sync_error-1.yaml",
+      "sha256": "128398c8c6ca4dcc8d97f8c4c61491366f6105a900cfb89f51ba1a7a4b2e3027"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-resource-plain-sync_error-1.yaml",
+      "sha256": "00b53cf5489264f3abaf9da3ca51952f5e95e5faa41966409a8d00c82ed307c0"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-resource-plain-sync_error-1.yaml",
+      "sha256": "b9c41d87dd591d82e36ff04ac460de64a8fcb4141d7f8a4e6de48c92762da948"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-taint-multi_hop-owner-1.yaml",
+      "sha256": "df77eafa7522a432cf2c6cabf402b38069f33a6ea6a96affe4d0559c69cb4c6e"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-taint-multi_hop-owner-1.yaml",
+      "sha256": "70b21eaea934be165fc405295f633dcacd4b6767f8b83de6dc8fc9873f627cb8"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-recipient-multi_hop-action_syntax-1.yaml",
+      "sha256": "2899476b9bf0d0e6a37fdef9f761433ee7ca9a95563b69f3b9c53a496b610fcf"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-recipient-multi_hop-action_syntax-1.yaml",
+      "sha256": "3ea5fecab2a3b1f857d5fc003c0f624adffd069497e4f6d33085c53cad1d38d5"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-url-plain-action_syntax-1.yaml",
+      "sha256": "e1b192732a7109167d355ed47df955c2e56cf49df771b7e4b3a8a7ab71a1f7ef"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-url-plain-action_syntax-1.yaml",
+      "sha256": "840d2e3f8f69f606c70493c793a0e178f90e288e13886b918954b4cac0f3391d"
+    }
+  ]
+}

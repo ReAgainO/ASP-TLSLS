@@ -1,0 +1,36 @@
+# Weak-model pilot on SiliconFlow: Qwen2.5-7B-Instruct, 12 pairs x D0/D1/D4 = 72 episodes.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - pilot-16-b64force
+  - pilot-17-augment
+  - pilot-18-internal
+  - pilot-19-prereq
+  - pilot-21-deadline
+  - pilot-22-planforgery
+  - pilot-24-reviewer
+  - pilot-27-goalhijack
+  - aig-06-preapproval
+  - injec-amazon-dell-enh
+  - injec-todoist-tasks-base
+  - sys-01-direct
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 90.0
+    request_cost_ceiling: 0.002
+defenses: [D0, D1, D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 3.0
+  max_requests: 800

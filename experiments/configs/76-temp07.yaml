@@ -1,0 +1,29 @@
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - pilot-16-b64force
+  - pilot-17-augment
+  - pilot-22-planforgery
+  - aig-06-preapproval
+  - injec-amazon-dell-enh
+  - sys-01-direct
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.7
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 4.0
+  max_requests: 1500

@@ -1,0 +1,201 @@
+{
+  "tier": "T-taint-20",
+  "corpus": "probe-v1",
+  "boundary": "taint",
+  "selection_rule": "all 4 domains x 5 phrasings; form = [plain, multi_hop, base64, multi_hop_base64][(domain_index + phrasing_index) mod 4]; lexicographically first instance",
+  "pairs": 20,
+  "variants": 40,
+  "defenses": [
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+  ],
+  "episodes_per_model": 200,
+  "subset_sha256": "30b282ccb6f90cc384b863be0cf314d64c708ff856065e73eff7385bcbbcd472",
+  "pair_ids": [
+    "probe-calendar-taint-base64-authority_threat-1",
+    "probe-calendar-taint-base64-owner-1",
+    "probe-calendar-taint-multi_hop-action_syntax-1",
+    "probe-calendar-taint-multi_hop_base64-sync_error-1",
+    "probe-calendar-taint-plain-urgency-1",
+    "probe-email-taint-base64-urgency-1",
+    "probe-email-taint-multi_hop-sync_error-1",
+    "probe-email-taint-multi_hop_base64-action_syntax-1",
+    "probe-email-taint-plain-authority_threat-1",
+    "probe-email-taint-plain-owner-1",
+    "probe-file-taint-base64-sync_error-1",
+    "probe-file-taint-multi_hop-authority_threat-1",
+    "probe-file-taint-multi_hop-owner-1",
+    "probe-file-taint-multi_hop_base64-urgency-1",
+    "probe-file-taint-plain-action_syntax-1",
+    "probe-web-taint-base64-action_syntax-1",
+    "probe-web-taint-multi_hop-urgency-1",
+    "probe-web-taint-multi_hop_base64-authority_threat-1",
+    "probe-web-taint-multi_hop_base64-owner-1",
+    "probe-web-taint-plain-sync_error-1"
+  ],
+  "file_hashes": [
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-taint-base64-authority_threat-1.yaml",
+      "sha256": "c1c7f5eebcf8a85e4d999c7147d97cd418763b43df2bc88b92da5a76856a43b4"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-taint-base64-authority_threat-1.yaml",
+      "sha256": "f1e914cdae3b8cc2f59d797ba7c22607fab3eb2ca711669c19501da40649df5c"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-taint-base64-owner-1.yaml",
+      "sha256": "df30a1bdc79e24e4faec6d87a89c847dc69ca1ffd34889dff824ffc2e8c86f0c"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-taint-base64-owner-1.yaml",
+      "sha256": "56de1a1c936da6ce55008f92d84f0b692b08039f63c2d66115397089abc9c86a"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-taint-multi_hop-action_syntax-1.yaml",
+      "sha256": "94bb05ee193af1b2c408b550a81a129b64ee4176dd2364a3688c8289595c1084"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-taint-multi_hop-action_syntax-1.yaml",
+      "sha256": "3a35b2ba3f80200518b56c00ccd5024f116749fde6d6bcfaee94d1887ba8e473"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-taint-multi_hop_base64-sync_error-1.yaml",
+      "sha256": "fd5ad8536fa9ab51e254be271d7c20f3860436921dcb4fd8f693b6cb2270016c"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-taint-multi_hop_base64-sync_error-1.yaml",
+      "sha256": "592f2abc724d1431717927ca9caaa301c568a61eeda4aec7669908de4e7d6227"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-calendar-taint-plain-urgency-1.yaml",
+      "sha256": "c6793539a2a52f02a8dd0e2aacafbc005e55a60c0013d73f1e2bdf692b7b7644"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-calendar-taint-plain-urgency-1.yaml",
+      "sha256": "f89feba64ba4b67c0e980427c7b7ba29c1bd19d0148e30121345fb2076bbc8f9"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-taint-base64-urgency-1.yaml",
+      "sha256": "c1c4cd1063bc15fbe6ec3ec2b7f9f86af2e4515cc869e76bd82bc84602ae1372"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-taint-base64-urgency-1.yaml",
+      "sha256": "dfbb8dca7a1fd0f0eb524fc46f4b70654160f640685711503da394334dfd5529"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-taint-multi_hop-sync_error-1.yaml",
+      "sha256": "65a0d59c7f82d6a1ff435b7a1fc87bcd6022ed19a608973c231c53c4bb8204e8"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-taint-multi_hop-sync_error-1.yaml",
+      "sha256": "a9c493a76bf1e29267ed38d26768207bac881e02ff1e8f9bebdb3da467e4c48a"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-taint-multi_hop_base64-action_syntax-1.yaml",
+      "sha256": "2cd008741c981fc22ff2426207948a1a3c0142e7c3845511e14fc8eaa33a63e5"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-taint-multi_hop_base64-action_syntax-1.yaml",
+      "sha256": "983c1afb3dbbb25048bff84081e9b7b10bd24bec95cec1f317aa9c2a873e8894"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-taint-plain-authority_threat-1.yaml",
+      "sha256": "2c94852f6641f1ecadb570537e417a014792b67d2011af177b63c8f117f7c29d"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-taint-plain-authority_threat-1.yaml",
+      "sha256": "2d724f07798bb81c761da07df87c9710c3aec5123b396ebaacf9fbeb73f97dee"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-email-taint-plain-owner-1.yaml",
+      "sha256": "5a8df22a9d909889dabc85890ed1ff3ab4987f8cf6b29f45558268055c0b8d7e"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-email-taint-plain-owner-1.yaml",
+      "sha256": "571f59a941ba58901e5d71ebca938de0f060ca0e0dbc8774c65db13540374418"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-taint-base64-sync_error-1.yaml",
+      "sha256": "d0a057310c56f126872ac989516c47615ef23b5c26d4a3ae856631f71e7203ff"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-taint-base64-sync_error-1.yaml",
+      "sha256": "ed48fd3dd957a78562893043e7559320d7e03ea59431adde8f04f75355e0a2a4"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-taint-multi_hop-authority_threat-1.yaml",
+      "sha256": "3093a9e6a595174c654c6458145759c2fa77c761fd08e8f0111706867acf943e"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-taint-multi_hop-authority_threat-1.yaml",
+      "sha256": "effee9a8de44fffa324a8f26b58c386d6e9dc493b7f5e126db95bc44cd3ccc09"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-taint-multi_hop-owner-1.yaml",
+      "sha256": "df77eafa7522a432cf2c6cabf402b38069f33a6ea6a96affe4d0559c69cb4c6e"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-taint-multi_hop-owner-1.yaml",
+      "sha256": "70b21eaea934be165fc405295f633dcacd4b6767f8b83de6dc8fc9873f627cb8"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-taint-multi_hop_base64-urgency-1.yaml",
+      "sha256": "3a9cae00c22ab0871e8eb32c8b8f86d8c22d35ff647e1f52417259a164723fcd"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-taint-multi_hop_base64-urgency-1.yaml",
+      "sha256": "c4626dced4bdfc93eb56fc96dcbe49df5e98c0b597e8cfbae617475835584ed3"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-file-taint-plain-action_syntax-1.yaml",
+      "sha256": "7615f5d1381c4b38269742e02fd3289e67c9dd7e646dc0013b87196360735d08"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-file-taint-plain-action_syntax-1.yaml",
+      "sha256": "4b2abe4c59f0f709b7c28259acb7d4cf9e44c9cc70b6dbad064e729421e69094"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-taint-base64-action_syntax-1.yaml",
+      "sha256": "b04b6259a8bea672dbaab776ed4cb9ab267e360529aa15e39601dce5600a3463"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-taint-base64-action_syntax-1.yaml",
+      "sha256": "09bbd50f2f54ed9466107503d3282a521ca5096a0ac1548d0f9bc41085e81a80"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-taint-multi_hop-urgency-1.yaml",
+      "sha256": "9cc62e92f983cfd65df66f59702b6c48e86bce8a4b59f9db92dd2e57cf97f466"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-taint-multi_hop-urgency-1.yaml",
+      "sha256": "1be5e8fe80cbbd2af00f3324fe8425ab2bb8844bd642fb1c8f135ad02e347866"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-taint-multi_hop_base64-authority_threat-1.yaml",
+      "sha256": "98fab83e1e744a576891d086f0d18c7aad126cdb1699af64c24f5e4919039ef8"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-taint-multi_hop_base64-authority_threat-1.yaml",
+      "sha256": "f16f606996a9b36a61df24c249f588a6e5d26fd20fcec4420a726ddf0d53d64f"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-taint-multi_hop_base64-owner-1.yaml",
+      "sha256": "0880838f8100c088abad071e031d98ee10551d90456a2b6e7e1a64e8ebb052a6"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-taint-multi_hop_base64-owner-1.yaml",
+      "sha256": "869793efa5b4e373cbb76f4e58eccc51e1e769559bdbfec020c8587adb19a8c4"
+    },
+    {
+      "file": "tasks/probe-v1/clean/probe-web-taint-plain-sync_error-1.yaml",
+      "sha256": "4fa60d4dec023fe91550b2e88f678ef7c607da83398854163d81036642101204"
+    },
+    {
+      "file": "tasks/probe-v1/injected/probe-web-taint-plain-sync_error-1.yaml",
+      "sha256": "cf56992222612092d666e2f2334b94e590a8b21d48c8e681d6ce791919000fc9"
+    }
+  ]
+}

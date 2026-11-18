@@ -1,0 +1,28 @@
+schema_version: 1
+live_enabled: false
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expansion-v1
+models:
+- name: deepseek41-flash
+  model: deepseek-v4.1-flash
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  request_cost_ceiling: 3.0
+  seed: 0
+defenses:
+- D0
+- D1
+- D2
+- D3
+- D4
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 18000.0
+  max_requests: 6000

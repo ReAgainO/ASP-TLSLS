@@ -1,0 +1,28 @@
+# Must-egress pairs: the plan grants an outbound email, so only taint can stop a leak.
+# Qwen2.5-7B, D0/D1/D4, 3 pairs = 18 episodes.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/expanded
+task_pairs:
+  - egress-01-brief
+  - egress-02-invoice
+  - egress-03-status
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 90.0
+    request_cost_ceiling: 0.002
+defenses: [D0, D1, D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 2.0
+  max_requests: 400

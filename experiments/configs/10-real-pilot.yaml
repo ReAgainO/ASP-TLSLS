@@ -1,0 +1,26 @@
+# Model identifiers supplied by the team; provider compatibility is unverified.
+schema_version: 1
+live_enabled: false
+endpoint_format_confirmed: false
+cost_bounds_confirmed: false
+task_root: tasks/benchmark
+models:
+  - name: deepseek-flash
+    model: deepseek-v4.1-flash
+    request_cost_ceiling: null
+  - name: deepseek-economy
+    model: deepseek-v4.1-flash-economy
+    request_cost_ceiling: null
+  - name: glm-flash
+    model: glm-5.3-flash
+    request_cost_ceiling: null
+defenses: [D0, D1, D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: USD
+  max_cost: 0.0
+  max_requests: 0

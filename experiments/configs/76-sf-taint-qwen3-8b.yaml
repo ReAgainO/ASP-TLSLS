@@ -1,0 +1,56 @@
+# #76 taint deep-dive: subset-T-taint-20 (sha256 30b282ccb6f90cc384b863be0cf314d64c708ff856065e73eff7385bcbbcd472) x 2 variants x D0-D4 = 200 episodes
+# on Qwen/Qwen3-8B. Same parameters as the screen batch. Free tier, so max_cost 15 CNY is a guard.
+# NOTE on the metric: for the taint boundary attacker_target IS the authorised recipient by
+# construction, so a canary in an outbound counts under ASR-Exfil even though nothing reached
+# an external address. The report splits the two denominators; do not read these as exfil to
+# an attacker. seed is sent but not honoured by this backend.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/probe-v1
+task_pairs:
+- probe-calendar-taint-base64-authority_threat-1
+- probe-calendar-taint-base64-owner-1
+- probe-calendar-taint-multi_hop-action_syntax-1
+- probe-calendar-taint-multi_hop_base64-sync_error-1
+- probe-calendar-taint-plain-urgency-1
+- probe-email-taint-base64-urgency-1
+- probe-email-taint-multi_hop-sync_error-1
+- probe-email-taint-multi_hop_base64-action_syntax-1
+- probe-email-taint-plain-authority_threat-1
+- probe-email-taint-plain-owner-1
+- probe-file-taint-base64-sync_error-1
+- probe-file-taint-multi_hop-authority_threat-1
+- probe-file-taint-multi_hop-owner-1
+- probe-file-taint-multi_hop_base64-urgency-1
+- probe-file-taint-plain-action_syntax-1
+- probe-web-taint-base64-action_syntax-1
+- probe-web-taint-multi_hop-urgency-1
+- probe-web-taint-multi_hop_base64-authority_threat-1
+- probe-web-taint-multi_hop_base64-owner-1
+- probe-web-taint-plain-sync_error-1
+defenses:
+- D0
+- D1
+- D2
+- D3
+- D4
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+models:
+- name: qwen3-8b
+  model: Qwen/Qwen3-8B
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  timeout_seconds: 300.0
+  request_cost_ceiling: 0.013
+  seed: 0
+budget:
+  currency: CNY
+  max_cost: 15.0
+  max_requests: 1200

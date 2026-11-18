@@ -1,0 +1,48 @@
+{
+  "issue": 19,
+  "source_issue": 17,
+  "completed_cells": 6,
+  "selected_example": {
+    "run": "r64-d100-train",
+    "canary_id": "canary_0000",
+    "prompt_type": "suffix"
+  },
+  "files": {
+    "extraction-matrix.pdf": {
+      "bytes": 31116,
+      "sha256": "8f8b82b0634e7355cc5bd1e9590edad6cad23c893e994fe7479a701b64bbefce"
+    },
+    "extraction-matrix.png": {
+      "bytes": 287179,
+      "sha256": "473aab2f929564fca67c7bfbb8681c6b02d3b4d47f7023adcc2747c98b3e00a6"
+    },
+    "extraction-matrix.svg": {
+      "bytes": 21262,
+      "sha256": "08dc22e747e11cb9faedbf08c999b0bdbe94760756dc2aead70f02a5f384b555"
+    },
+    "positive-control.pdf": {
+      "bytes": 33303,
+      "sha256": "ff1fd5696d297d151ca04023892784f2a22fddb36ca9629024dd83844318cf7e"
+    },
+    "positive-control.png": {
+      "bytes": 277547,
+      "sha256": "e7bf2043f209bfc04dc2abb93563fbb0e78c86ce9202d86a23ab7ba0e7498598"
+    },
+    "positive-control.svg": {
+      "bytes": 4641,
+      "sha256": "b9bccb7604131ca42c3833a2bd475761c2a4c47693009ee368c9eca7f55cf994"
+    },
+    "provenance.json": {
+      "bytes": 884,
+      "sha256": "750350cfa3f3218d678eb9eb44e179fb92deb7ac789e4dd6979f228c585e3669"
+    },
+    "render-events.jsonl.gz": {
+      "bytes": 420,
+      "sha256": "e19f1a7ccd55c267c16b5645ed462def799c053b2ca0ac36a654e6c7fac79a2d"
+    },
+    "summary.csv": {
+      "bytes": 1493,
+      "sha256": "e772f36db5d9809c8fb1b4f2d99c81b7a09b36013b229c06a21659c50582ac98"
+    }
+  }
+}

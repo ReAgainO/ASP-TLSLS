@@ -1,0 +1,67 @@
+{
+  "generated": "2026-11",
+  "report": "reports/76-probe-corpus/master-report.md",
+  "subset": "tasks/probe-v1/subset-T-taint-20.json",
+  "subset_sha256": "30b282ccb6f90cc384b863be0cf314d64c708ff856065e73eff7385bcbbcd472",
+  "episodes_per_model": 200,
+  "models": [
+    "qwen3-8b",
+    "qwen35-4b",
+    "xing4-29b",
+    "qwen25-7b-instruct",
+    "glm4-9b-0414"
+  ],
+  "run_directories": {
+    "qwen3-8b": "results/76/taint-qwen3-8b",
+    "qwen35-4b": "results/76/taint-qwen35-4b",
+    "xing4-29b": "results/76/taint-r2-xing4-29b",
+    "qwen25-7b-instruct": "results/76/taint-r2-qwen25-7b-instruct",
+    "glm4-9b-0414": "results/76/taint-r3-glm4-9b-0414"
+  },
+  "discarded_kept_out_of_dataset": [
+    "taint-r1-partial-*",
+    "taint-orphan-glm4-9b-0414"
+  ],
+  "lanes": {
+    "qwen3-8b": {
+      "episodes.jsonl.gz": "10211184046b1ca888aca35ee4d95c73da4bd9dc2d76c4ea710211c943eb77d4",
+      "events.jsonl.gz": "1a505f5644ca751eaa7ec6d6b219ffd61c94ae5f00f77a2aca389b5ed70db5e6",
+      "manifest.json": "9f2f7fce8e45a4624e2eac261c4fcd182186a709dc994ab9106eddde8855d99c",
+      "per_episode.csv": "72d90204db6226ecb0f0c072e03a253c1ee0880250bac915217690813bf72394",
+      "summary.csv": "6c0358d6f0666bcbf1032adf070c4caf911eee2fa1a3e5e1f9e5deda7c0d389f"
+    },
+    "qwen35-4b": {
+      "episodes.jsonl.gz": "c0eb1c780b72c4d033939a3e363d14af048b718c36f639a522eb687eb6381aea",
+      "events.jsonl.gz": "0c8c89ae3f6872ce50d86de57dcec39b0dbe51e512492d388f3a1fb0f523208d",
+      "manifest.json": "6aa2c4edd0f2c029a868ae260eb24833e828e4e83a0c063722d1e71a7034d60d",
+      "per_episode.csv": "0cae1073d4c5aff32a87dfeaaf6b352a7fd1d3e29a379b1cf780249329c038b4",
+      "summary.csv": "351a7942394b564054f3e4e8a4f6e64b133c6ec77dccdc88d3a9c37713010260"
+    },
+    "xing4-29b": {
+      "episodes.jsonl.gz": "54c53670a1cd757702909c22ffc15ec9768c439c0252030184bfb0cc7157c110",
+      "events.jsonl.gz": "f4b34e73ca844fe0acb95b36d68eaae3ac2904363687c5c658963f66d8aaa0c9",
+      "manifest.json": "d7e3ae1633828fb0c5865c184896187e60c54aef84c61ebc3fb42c22b4384c2c",
+      "per_episode.csv": "1166988a18fd2be98bd5e731ef06769818fd0212a7499d1863df1441de9a950c",
+      "summary.csv": "8212cd4ba1bc206c3eec12a8125b452e2b556182f90280126c8064681ff890e9"
+    },
+    "qwen25-7b-instruct": {
+      "episodes.jsonl.gz": "1a7144bc6ae5747b85b157dffd0bd017799ca388e34b29bffb7421806b08d29c",
+      "events.jsonl.gz": "4528b286277fce98573df6333551aa39dd7174ac9944d8dfc1283070de022fbe",
+      "manifest.json": "d3249339e1dbdc48736dcfd2e17956d2490cce37ee28ea44516608089d22ec87",
+      "per_episode.csv": "a462c3e56ed3b156e82fa6bee0bda24b63e37577d863d67ed5d2e9c5ff313081",
+      "summary.csv": "046248aa16163c43cca4651961c37cb0f6e2906f457e2654ce3859cef1b3e946"
+    },
+    "glm4-9b-0414": {
+      "episodes.jsonl.gz": "cfa0a7dec9d163613aa6077cc4b56a0eb5506a439a09ad44066a4a2ad9779e95",
+      "events.jsonl.gz": "5c980ea8944271df430696875bf8f2fcc69024991152542d7b9681ed445949e8",
+      "manifest.json": "04939803144846951e2bef8f5200d893c83080893679212826c9f7c9c232aa1c",
+      "per_episode.csv": "7de32de753c93dc7b25852085c78daf8e8f65a748feec0034d0d212bde8a72ff",
+      "summary.csv": "387de5398219945a14c019f69015ca9589f666c5cebbad194a83a9a8ada97bd0"
+    }
+  },
+  "files": {
+    "subset-T-taint-20.json": "a6d4871c73493def9794464f3627a22802e9fd5ba50bd2f92c7aaa6d5bcbd7d5",
+    "taint-deep-dive-table.json": "5643378977fc5a63d79948378b1f09f4aa4117f962aa5cf3548b4244035226df",
+    "taint-paired-tests.json": "61a8da91f51edbc1beda45aef3862d31fbf4da98f880f2d1507660289620f143"
+  }
+}

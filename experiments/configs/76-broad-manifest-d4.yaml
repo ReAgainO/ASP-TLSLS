@@ -1,0 +1,38 @@
+# D4 under a broad manifest: scope checks disabled, so only exact-canary taint can block.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: <path-redacted>
+manifest_mode: broad
+task_pairs:
+  - eval-calendar-recipient-multi_hop
+  - eval-calendar-taint-multi_hop
+  - eval-calendar-taint-plain
+  - eval-email-read_scope-plain
+  - eval-email-taint-plain
+  - eval-file-read_scope-multi_hop
+  - eval-file-resource-multi_hop
+  - eval-file-taint-multi_hop
+  - eval-file-taint-plain
+  - eval-web-recipient-plain
+  - eval-web-taint-multi_hop
+  - eval-web-taint-plain
+  - eval-web-url-plain
+models:
+  - name: qwen25-7b
+    model: Qwen/Qwen2.5-7B-Instruct
+    temperature: 0.0
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.002
+defenses: [D4]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 3.0
+  max_requests: 1200

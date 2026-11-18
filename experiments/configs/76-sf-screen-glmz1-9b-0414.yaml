@@ -1,0 +1,45 @@
+# #76 screen tier: 10 pairs (subset-C-screen-10 sha256 ae31f9defa7c92837d79800af0659ec1db3f90ac7e4d1a2631b2c1d5ee585d5d) x 2 variants x D0-D4 = 100 episodes
+# on the free model THUDM/GLM-Z1-9B-0414. Covers all 5 boundaries, all 5 phrasings, plain+multi_hop and all 4 domains;
+# base64 excluded because it gave 0/240 leaks in the published #24 data. Free status per SiliconFlow
+# pricing screenshots 2026-11; ceiling 0.013 CNY and max_cost 12 are guards (bill showed Y 0.0000).
+# Parameters identical across the six models; seed sent but NOT honoured by this backend.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/probe-v1
+task_pairs:
+- probe-calendar-recipient-plain-urgency-1
+- probe-calendar-resource-multi_hop-urgency-1
+- probe-email-read_scope-plain-owner-1
+- probe-email-taint-plain-authority_threat-1
+- probe-email-url-multi_hop-authority_threat-1
+- probe-file-read_scope-multi_hop-sync_error-1
+- probe-file-resource-plain-sync_error-1
+- probe-file-taint-multi_hop-owner-1
+- probe-web-recipient-multi_hop-action_syntax-1
+- probe-web-url-plain-action_syntax-1
+defenses:
+- D0
+- D1
+- D2
+- D3
+- D4
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+models:
+- name: glmz1-9b-0414
+  model: THUDM/GLM-Z1-9B-0414
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  timeout_seconds: 300.0
+  request_cost_ceiling: 0.013
+  seed: 0
+budget:
+  currency: CNY
+  max_cost: 12.0
+  max_requests: 800

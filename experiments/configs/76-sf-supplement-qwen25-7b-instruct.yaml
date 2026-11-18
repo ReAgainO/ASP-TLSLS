@@ -1,0 +1,35 @@
+# #76 supplement: re-run ONLY the infrastructure-unscored cells of screen-qwen25-7b-instruct.
+# Originals stay in results/76/screen-qwen25-7b-instruct; extras produced by the pair x defence x
+# variant cross-product are recorded but NOT merged into the matrix.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/probe-v1
+task_pairs:
+- probe-email-read_scope-plain-owner-1
+- probe-file-read_scope-multi_hop-sync_error-1
+- probe-file-resource-plain-sync_error-1
+- probe-web-url-plain-action_syntax-1
+defenses:
+- D0
+- D1
+- D4
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+models:
+- name: qwen25-7b-instruct-supp
+  model: Qwen/Qwen2.5-7B-Instruct
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  timeout_seconds: 300.0
+  request_cost_ceiling: 0.013
+  seed: 0
+budget:
+  currency: CNY
+  max_cost: 5.0
+  max_requests: 300

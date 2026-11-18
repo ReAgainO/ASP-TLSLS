@@ -1,0 +1,30 @@
+# #76 supplement: re-run ONLY the infrastructure-unscored cells of screen-xing4-29b.
+# Originals stay in results/76/screen-xing4-29b; extras produced by the pair x defence x
+# variant cross-product are recorded but NOT merged into the matrix.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/probe-v1
+task_pairs:
+- probe-calendar-resource-multi_hop-urgency-1
+defenses:
+- D1
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+models:
+- name: xing4-29b-supp
+  model: XingChenAGI/Xing4.0-29B
+  enable_thinking: false
+  temperature: 0.0
+  max_output_tokens: 512
+  timeout_seconds: 300.0
+  request_cost_ceiling: 0.013
+  seed: 0
+budget:
+  currency: CNY
+  max_cost: 5.0
+  max_requests: 300

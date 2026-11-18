@@ -1,0 +1,15 @@
+{
+  "run_id": "f728fc3c549c4cac9d2264a308624b75",
+  "created_at": "2026-11",
+  "evidence": "live_api",
+  "protocol_version": "json-actions-v2",
+  "transport_version": "chat-completions-observation-user-v1",
+  "config_hash": "7f192f8f6102af1093d46936a67ab5c7622c88809eca77c907977a76caf3fd46",
+  "fingerprint": "2808144778c8f3e0a82d515527a6cc3d1214b35408deb8d87033232f033eec58",
+  "code_revision": "c1f6ec356a2c4e34c71f100dd778575fd6cfba32",
+  "source_hash": "a4d5942f9cad305df1793adee913b54376e43d5aa98a3e8b9681e55955c240e4",
+  "endpoint": [
+    "<provider-base-url>"
+  ],
+  "matrix_cells": 36
+}

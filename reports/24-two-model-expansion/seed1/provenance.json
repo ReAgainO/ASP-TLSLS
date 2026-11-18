@@ -1,0 +1,137 @@
+[
+  {
+    "run": "<path-redacted>",
+    "model": "qwen3.8-flash",
+    "created_at": "2026-11",
+    "code_revision": "81b2da6b763430b3d0d1b26040c3205610a452eb",
+    "source_hash": "0bc4302ab77e48bdc190eea9dd54a3a9d931adec04b2ad9075490ba117646670",
+    "config_hash": "8c02d8d7f17771145db478720b16ab473dfa51988dcbea85daf2772f13cf1d2c",
+    "fingerprint": "d7b7882c10d761d9341807cb8f4818ff14281d8de0b560b141b1331ba8a960bc",
+    "config": {
+      "schema_version": 1,
+      "live_enabled": true,
+      "endpoint_format_confirmed": true,
+      "cost_bounds_confirmed": true,
+      "task_root": "tasks/expansion-v1",
+      "task_pairs": null,
+      "models": [
+        {
+          "name": "qwen38-flash",
+          "model": "qwen3.8-flash",
+          "base_url_env": "AGENTLEAK_BASE_URL",
+          "api_key_env": "AGENTLEAK_API_KEY",
+          "temperature": 0.0,
+          "enable_thinking": false,
+          "seed": 1,
+          "max_output_tokens": 512,
+          "timeout_seconds": 60.0,
+          "request_cost_ceiling": 1.0
+        }
+      ],
+      "defenses": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "repetitions": 1,
+      "schedule_seed": 0,
+      "max_steps": 10,
+      "parse_retries": 2,
+      "confirm_high_risk": true,
+      "budget": {
+        "currency": "CNY",
+        "max_cost": 6000.0,
+        "max_requests": 6000
+      }
+    },
+    "requests": 2661,
+    "received": 2660,
+    "input_tokens": 897680,
+    "output_tokens": 68576,
+    "unknown_usage_responses": 0,
+    "nominal_uncached_cny": "0.9032992",
+    "cached_input_tokens": 0,
+    "reported_models": [
+      "qwen3.8-flash"
+    ],
+    "statuses": {
+      "completed": 599,
+      "model_error": 1
+    },
+    "raw_sha256": {
+      "manifest.json": "c0ce830fac1b00bf1552da4a6643cde1c07fbc250c7c41fe317b5da7d26893ed",
+      "episodes.jsonl": "2f321ca533842dd0bb2b631ad6f148a15453da7c8e07119e61a39d2f66a47ed2",
+      "events.jsonl": "16af0b98faf338b8e54611a20688ec4bc54fb323c8817046ea849f937f98853e"
+    }
+  },
+  {
+    "run": "<path-redacted>",
+    "model": "deepseek-v4.1-flash",
+    "created_at": "2026-11",
+    "code_revision": "81b2da6b763430b3d0d1b26040c3205610a452eb",
+    "source_hash": "0bc4302ab77e48bdc190eea9dd54a3a9d931adec04b2ad9075490ba117646670",
+    "config_hash": "a5922e6c29ce1b748c6337f27344766adb4ed87d1162c36465c7fc2220e7adb4",
+    "fingerprint": "381fe91b7bf2aa11d88621465261aee3f723ab80e4d4fbf6db7b982c61af4f4e",
+    "config": {
+      "schema_version": 1,
+      "live_enabled": true,
+      "endpoint_format_confirmed": true,
+      "cost_bounds_confirmed": true,
+      "task_root": "tasks/expansion-v1",
+      "task_pairs": null,
+      "models": [
+        {
+          "name": "deepseek41-flash",
+          "model": "deepseek-v4.1-flash",
+          "base_url_env": "AGENTLEAK_BASE_URL",
+          "api_key_env": "AGENTLEAK_API_KEY",
+          "temperature": 0.0,
+          "enable_thinking": false,
+          "seed": 1,
+          "max_output_tokens": 512,
+          "timeout_seconds": 60.0,
+          "request_cost_ceiling": 3.0
+        }
+      ],
+      "defenses": [
+        "D0",
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "repetitions": 1,
+      "schedule_seed": 0,
+      "max_steps": 10,
+      "parse_retries": 2,
+      "confirm_high_risk": true,
+      "budget": {
+        "currency": "CNY",
+        "max_cost": 18000.0,
+        "max_requests": 6000
+      }
+    },
+    "requests": 2684,
+    "received": 2683,
+    "input_tokens": 854273,
+    "output_tokens": 89502,
+    "unknown_usage_responses": 0,
+    "nominal_uncached_cny": "2.424562",
+    "cached_input_tokens": 392448,
+    "reported_models": [
+      "deepseek-v4.1-flash"
+    ],
+    "statuses": {
+      "completed": 598,
+      "protocol_failure": 1,
+      "model_error": 1
+    },
+    "raw_sha256": {
+      "manifest.json": "d44b707a516e4afbe6e7c842a82008d621ef531ddbc10f3802983c871a0cddd1",
+      "episodes.jsonl": "721b2c61a6d10ed78ecbc5aa75b256aba8df630de8a3c2b8c1f5b4b0cf37d8f2",
+      "events.jsonl": "342096552abba062a66efd48671c2052f5c55bf3ee4c29deb7ba094c6eaac4fe"
+    }
+  }
+]

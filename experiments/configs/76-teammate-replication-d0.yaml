@@ -1,0 +1,29 @@
+# task_root points at a local extract of <member-A> PR #79 tasks/expansion-v1.
+# Re-extract with: git archive <branch> tasks/expansion-v1 | tar -x -C <dir>
+# Calibration against the Volcengine Ark endpoint supplied by the team.
+# Three new families, D0 only, three models. live gates are true because the endpoint
+# transport was verified with single-request probes on 2026-11 (see runbook notes).
+# request_cost_ceiling is derived from measured probe usage (~40-70 input, ~50-70 output
+# tokens per request), NOT from a price sheet: confirm against the Ark console bill.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true  # ceiling derived from measured probe tokens; verify against Ark console bill
+task_root: <path-redacted>
+models:
+  - name: deepseek41-flash
+    model: deepseek-v4.1-flash
+    temperature: 0.0
+    max_output_tokens: 4096
+    timeout_seconds: 60.0
+    request_cost_ceiling: 0.002
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 2.0
+  max_requests: 600

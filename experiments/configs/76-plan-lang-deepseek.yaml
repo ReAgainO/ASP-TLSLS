@@ -1,0 +1,33 @@
+# Plan-forgery payload x 9 languages x 3 reps, paid Pro/deepseek-ai/DeepSeek-V3.2.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true
+task_root: tasks/lang
+task_pairs:
+  - lang-22-planforgery-ar
+  - lang-22-planforgery-en
+  - lang-22-planforgery-es
+  - lang-22-planforgery-ja
+  - lang-22-planforgery-ko
+  - lang-22-planforgery-ru
+  - lang-22-planforgery-sw
+  - lang-22-planforgery-th
+  - lang-22-planforgery-zh
+models:
+  - name: deepseek-v32
+    model: Pro/deepseek-ai/DeepSeek-V3.2
+    temperature: 0.7
+    max_output_tokens: 1024
+    timeout_seconds: 300.0
+    request_cost_ceiling: 0.01
+defenses: [D0]
+repetitions: 3
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: CNY
+  max_cost: 3.0
+  max_requests: 1200

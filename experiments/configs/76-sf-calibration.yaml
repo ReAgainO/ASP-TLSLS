@@ -1,0 +1,36 @@
+# #76 first fire: SiliconFlow (硅基流动) hosted open-weight Qwen3-8B, small calibration only.
+# Transport verified with single raw requests on 2026-11: chat/completions OK,
+# enable_thinking=false honoured (reasoning_tokens=0), response_format json_object OK.
+# seed IS accepted but NOT honoured: two temperature=1 calls with seed=999 returned
+# different answers, so do not claim seed-level reproducibility on this backend.
+# request_cost_ceiling is a conservative upper bound from measured prompt size
+# (~1.4k in, <=512 out) against a worst-case 8B price, NOT a confirmed price sheet:
+# confirm the real unit price in the SiliconFlow console before scaling past this file.
+schema_version: 1
+live_enabled: true
+endpoint_format_confirmed: true
+cost_bounds_confirmed: true  # conservative reservation ceiling; verify against console bill
+task_root: tasks/probe-v1
+task_pairs:
+  - probe-email-read_scope-plain-owner-1
+  - probe-file-read_scope-multi_hop_base64-action_syntax-1
+  - probe-web-recipient-plain-authority_threat-1
+defenses: [D0, D3]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+models:
+  - name: qwen3-8b
+    model: Qwen/Qwen3-8B
+    enable_thinking: false
+    temperature: 0.0
+    max_output_tokens: 512
+    timeout_seconds: 120.0
+    request_cost_ceiling: 0.02
+    seed: 0
+budget:
+  currency: CNY
+  max_cost: 2.0
+  max_requests: 100

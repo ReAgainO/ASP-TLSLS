@@ -1,0 +1,21 @@
+# Four episodes only: two paired scenarios, one model, D0.
+schema_version: 1
+live_enabled: false
+endpoint_format_confirmed: false
+cost_bounds_confirmed: false
+task_root: tasks/benchmark
+task_pairs: [pilot-01, pilot-04]
+models:
+  - name: deepseek-flash
+    model: deepseek-v4.1-flash
+    request_cost_ceiling: null
+defenses: [D0]
+repetitions: 1
+schedule_seed: 0
+max_steps: 10
+parse_retries: 2
+confirm_high_risk: true
+budget:
+  currency: USD
+  max_cost: 0.0
+  max_requests: 0
