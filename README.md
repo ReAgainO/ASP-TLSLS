@@ -29,10 +29,6 @@ that outcome. All "API keys" in the corpus are fake canaries — see `CANARY-NOT
 - `PROVENANCE.md` — how this snapshot was produced and what was excluded or redacted.
 - `CANARY-NOTES.md` — why `sk-CANARY-*` strings appear everywhere and what they mean.
 
-## Provenance and licence
+## Licence
 
-Snapshot of an internal research repository rebuilt as a single fresh commit with no history;
-personal and infrastructure details were redacted before publication (see `PROVENANCE.md`).
-Contributor attribution uses anonymous codenames (`<member-A>` …) that encode no identity.
-
-Licensed under the terms in `LICENSE` — all rights reserved.
+All rights reserved.
